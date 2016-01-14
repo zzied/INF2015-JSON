@@ -21,7 +21,7 @@ public class Exercice2 {
         String json = FileReader.loadFileIntoString("json/catalogue.json", "utf-8");
         JSONArray livres = JSONArray.fromObject(json);
 
-        System.out.println("livres parus depuis 1990:");
+        System.out.println("livres parus depuis 2010:");
         int cpt = 0;
         for(int i = 0; i < livres.size(); i++) {
             JSONObject livre = livres.getJSONObject(i);
