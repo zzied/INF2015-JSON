@@ -14,16 +14,15 @@ import net.sf.json.JSONArray;
 
 /**
  * Parse a JSONArray
- * Get the number of CDs contained in the array
+ * Get the number of books contained in the array
  */
 public class Exercice1 {
     
     
     public static void main(String[] args) throws Exception {
         
-        String json2 = utilities.FileReader.loadFileIntoString("json/catalogue.json", "utf-8");
-        String json = FileReader.loadFileIntoString("json/catalogue.json", "utf-8");
-        JSONArray livres = JSONArray.fromObject(json2);
+        String json = utilities.FileReader.loadFileIntoString("json/catalogue.json");
+        JSONArray livres = JSONArray.fromObject(json);
         System.out.println("Il y a " + livres.size() + " livre(s) dans le catalogue.");
 
 

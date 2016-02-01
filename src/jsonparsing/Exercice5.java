@@ -23,7 +23,7 @@ public class Exercice5 {
 
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) throws Exception {
-        String json = FileReader.loadFileIntoString("json/catalogue.json", "utf-8");
+        String json = utilities.FileReader.loadFileIntoString("json/catalogue.json");
         JSONArray lvrs = JSONArray.fromObject(json);
 
         // Build the livre list to add in the order

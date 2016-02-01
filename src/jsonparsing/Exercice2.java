@@ -18,7 +18,7 @@ import net.sf.json.JSONObject;
  */
 public class Exercice2 {
     public static void main(String[] args) throws Exception {
-        String json = FileReader.loadFileIntoString("json/catalogue.json", "utf-8");
+        String json = utilities.FileReader.loadFileIntoString("json/catalogue.json");
         JSONArray livres = JSONArray.fromObject(json);
 
         System.out.println("livres parus depuis 2010:");

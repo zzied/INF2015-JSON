@@ -19,7 +19,7 @@ import org.apache.commons.io.IOUtils;
  */
 public class FileReader {
 
-    public static String loadFileIntoString(String filePath, String fileEncoding) 
+    public static String loadFileIntoString(String filePath) 
             throws FileNotFoundException, IOException {
         String fileString = new String(Files.readAllBytes(Paths.get(filePath)), 
                 StandardCharsets.UTF_8);
