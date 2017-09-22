@@ -15,6 +15,7 @@ import net.sf.json.JSONObject;
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import manage.file.FileManager;
 
 /**
  * Generate JSON Build a full order from catalog
@@ -23,7 +24,7 @@ public class Exercice5 {
 
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) throws Exception {
-        String json = utilities.FileReader.loadFileIntoString("json/catalogue.json");
+        String json = FileManager.createStringFromFileContent("json", "catalogue.json");
         JSONArray lvrs = JSONArray.fromObject(json);
 
         // Build the livre list to add in the order
@@ -53,8 +54,8 @@ public class Exercice5 {
         order.accumulate("date", dateOrder);
         order.accumulate("validation", true);
         order.accumulate("livres", livres);
-
-        System.out.println(order);
+             
+        FileManager.createFileFromStringContent("json", "order.json", order.toString());
 
     }
 }
