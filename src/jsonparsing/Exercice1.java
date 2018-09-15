@@ -10,7 +10,6 @@
  */
 package jsonparsing;
 
-import manage.file.FileManager;
 import net.sf.json.JSONArray;
 
 /**
@@ -22,7 +21,7 @@ public class Exercice1 {
     
     public static void main(String[] args) throws Exception {
         
-        String json = FileManager.createStringFromFileContent("json", "catalogue.json");
+        String json = FileReader.loadFileIntoString("json/catalogue.json","UTF-8");
         JSONArray livres = JSONArray.fromObject(json);
         System.out.println("Il y a " + livres.size() + " livre(s) dans le catalogue.");
 

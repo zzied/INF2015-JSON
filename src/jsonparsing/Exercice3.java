@@ -9,7 +9,6 @@ package jsonparsing;
  *
  * @author Zied Zaier < Zaier.Zied at uqam.ca>
  */
-import manage.file.FileManager;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -19,7 +18,7 @@ import net.sf.json.JSONObject;
  */
 public class Exercice3 {
     public static void main(String[] args) throws Exception {
-        String json = FileManager.createStringFromFileContent("json", "catalogue.json");
+        String json = FileReader.loadFileIntoString("json/catalogue.json","UTF-8");
         JSONArray livres = JSONArray.fromObject(json);
 
         System.out.println("Prix des livres disponibles:");
